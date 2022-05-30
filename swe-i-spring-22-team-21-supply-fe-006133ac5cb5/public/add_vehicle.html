@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add vehicle</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href=css/page_layout.css>
+    <link rel="stylesheet" href=css/form.css>
+    <link rel="stylesheet" href="css/data_display.css">
+    <!-- JS -->
+    <script src="js/add_vehicle_to_fleet.js"></script>
+    <script src="js/display_fleets.js"></script>
+</head>
+<body>
+    <div class="dashboard_header">
+		<a href='index.html'>WeGo Fleet Management</a>
+	</div>
+    <div class="page_title">Add a vehicle to a fleet</div>
+    <div class="sidenav">
+        <a href="index.html">Dashboard</a>
+        <a href="supply_account_details.html">Account</a>
+        <a href="supply_fleets.html">Fleets</a>
+        <a href="supply_map_view.html">Map view</a>
+        <a href="supply_vehicles.html">Vehicles</a>
+	</div>
+    <div class="horizontal_navbar">
+		<a href="supply_vehicles.html">Vehicles Overview |</a>
+        <a href="remove_vehicle.html">Remove a vehicle</a>
+	</div>
+    <br><br><br>
+    <!-- Display to select ID -->
+    <div class="display_fleet">
+        <button class="button" onclick="displayAllFleets();" id="fleet_overview_display" type="button">Show fleets</button>
+        <div class="data_display" id="fleet_data_display"> </div>
+    </div>
+    <br>
+    <!-- Order Form-->
+    <div class="form">
+        <form name="Form">
+            <label class="form-text" for="fleet_id">Fleet ID Number</label><br>
+            <input class="datalist" type="text" id="fleet_id"/><br>
+            <!-- VIN -->
+            <label class="form-text" for="vin">Vehicle Identification Number</label> <br>
+            <input class="form-control" type="text" id="vin" />
+            <!-- Make -->
+            <label class="form-text" for="make">Make</label> <br>
+            <input class="form-control" type="text" id="make" />
+            <!-- Model -->
+            <label class="form-text" for="Model">Model</label> <br>
+            <input class="form-control" type="text" id="model" />
+            <!-- Year -->
+            <label class="form-text" for="year">Year</label> <br>
+            <input class="form-control " type="number" id="year" />
+            <button class="button" onclick="addVehicle();" id="submit" type="submit">Add vehicle</button>
+        </form>
+    </div>
+    <div class="vehicleList">Vehicles</div>
+</body>
+</html>

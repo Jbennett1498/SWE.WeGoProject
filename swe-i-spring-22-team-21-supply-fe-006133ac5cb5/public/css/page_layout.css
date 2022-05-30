@@ -1,0 +1,147 @@
+body{
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
+  color: #ffffff;
+  background-color: #ffffff;
+  margin-left: 75px;
+}
+
+.map_dashboard_header{
+    font-size: 36px;
+    font-weight: 400px;
+    margin-top: 20px;
+    margin-left: 200px;
+    padding-top: 50px;
+    padding-bottom: 25px;
+}
+
+.map_page_title{
+    color: #232d39;
+    font-size: 24px;
+    margin-left:200px;
+    padding-right: 700px;
+    padding-bottom: 15px;
+}
+
+.page_title{
+    color: #232d39;
+    font-size: 24px;
+    margin-left:150px;
+    padding-right: 700px;
+    padding-bottom: 15px;
+}
+
+.data_display{
+    text-align: left;
+    color: #232d39;
+    margin-left: 150px;
+    margin-right: 900px;
+    padding-top: 50px;
+}
+
+.dashboard_header{
+  font-size: 36px;
+  font-weight: 400px;
+  margin-top: 20px;
+  margin-left: 150px;
+  padding-top: 50px;
+  padding-bottom: 25px;
+}
+
+
+
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #232d39;
+  color: #ffffff;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a:link{
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffffff;
+  display: block;
+}
+
+.sidenav a:hover{
+  padding: 6px 8px 6px 16px;
+  background-color: #7a7a7a;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffffff;
+  display: block;
+}
+
+.sidenav a:visited{
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffffff;
+  display: block;
+}
+
+.horizontal_navbar {
+  float: left;
+  font-size: 18px;
+  padding: 12px;
+  display: block;
+  border: 2px;
+  border-color: #dddddd;
+  border-radius: 12px;
+  background-color: #dddddd;
+  margin-left: 150px;
+  color: #ffffff;
+}
+
+
+.button{
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+    background-color: #2aad5c;
+    color: #ffffff;
+    border: 5px;
+    border-color: #2aad5c;
+    border-style: solid;
+    border-radius: 18px;
+}
+
+/* unvisited link */
+a:link {
+  color: #232d39;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* visited link */
+a:visited {
+  color: #232d39;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* mouse over link */
+a:hover {
+  color: #232d39;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* selected link */
+a:active {
+  color: #2aad5c;
+  border-width: 6px;
+  text-decoration: underline;
+  text-align: center;
+}

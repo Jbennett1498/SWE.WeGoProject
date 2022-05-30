@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Fleet</title>
+    <link rel="stylesheet" href=css/page_layout.css>
+    <link rel="stylesheet" href=css/form.css>
+</head>
+<body>
+    <div class="dashboard_header">
+		<a href='index.html'>WeGo Fleet Management</a>
+	</div>
+    <div class='page_title'>Create a Fleet</div>
+    <div class="sidenav">
+        <a href="index.html">Dashboard</a>
+        <a href="supply_account_details.html">Account</a>
+        <a href="supply_fleets.html">Fleets</a>
+        <a href="supply_map_view.html">Map view</a>
+        <a href="supply_vehicles.html">Vehicles</a>
+	</div>
+    <div class="horizontal_navbar">
+        <a href="supply_fleets.html">Fleets Overview |</a>
+        <a href="edit_fleet.html">Edit a fleet |</a>
+        <a href="remove_fleet.html">Remove a fleet |</a>
+	</div>
+    <br><br><br>
+    <!-- Order Form-->
+    <div class="form" id="'form">
+        <form name="Form" autocomplete="off" onsubmit="validateForm();">
+            <!--Fleet name -->
+            <label class="form-text" for="fleet_name">Fleet name</label> <br>
+            <input type="text" id="fleet_name" name="fleet_name" required/>
+            <!--Fleet's associated service-->
+            <label class="form-text" for="fleet_service">Fleet service</label> <br>
+            <input type="text" id="fleet_service" name="fleet_service" required/>
+            <!--Fleet owner-->
+            <label class="form-text" for="fleet_owner">Fleet owner</label> <br>
+            <input type="text" id="fleet_owner" name="fleet_owner" required/>
+            <!--Fleet description -->
+            <label class="form-text" for="fleet_desc" >Fleet description</label> <br>
+            <input type="text" id="fleet_desc" name="fleet_desc" required/>
+            <!--Fleet city -->
+            <label class="form-text" for="fleet_city">Fleet city</label> <br>
+            <input type="text" id="fleet_city" name="fleet_city" required/>
+            <br>
+            <button class="button" onclick="createFleet();" id ="submit" type="button">Create Fleet</button>
+        </form>
+    </div>
+</body>
+<script src="js/create_fleet.js"></script>
+</html>

@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    border: 5px solid #2aad5c;
+    border-radius: 12px;
+    background-color: #7a7a7a;
+    text-align: left;
+    margin-left: 200px;
+    margin-right: 600px;
+    padding-bottom: 500px;
+}
+
+#instructions {
+    margin-left: 300px;
+    margin-right: 800px;
+    width: 15%;
+    bottom: 80%;
+    padding: 5px;
+    padding-left: 100px;
+    background-color: #fff;
+    overflow-y: auto;
+    font-family: sans-serif;
+}

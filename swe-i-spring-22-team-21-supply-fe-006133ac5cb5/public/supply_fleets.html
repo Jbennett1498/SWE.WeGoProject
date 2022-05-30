@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Fleets Overview</title>
+    <link rel="stylesheet" href=css/page_layout.css>
+	<link rel="stylesheet" href=css/data_display.css>
+</head>
+<body>
+	<div class="dashboard_header">
+		<a href='index.html'>WeGo Fleet Management</a>
+	</div>
+	<div class="page_title">Fleets Overview</div>
+    <div class="sidenav">
+		<a href="index.html">Dashboard</a>
+        <a href="supply_account_details.html">Account</a>
+        <a href="supply_fleets.html">Fleets</a>
+        <a href="supply_map_view.html">Map view</a>
+        <a href="supply_vehicles.html">Vehicles</a>
+	</div>
+	<div class="horizontal_navbar">
+		<a href="create_fleet.html">Add a fleet |</a>
+		<a href="edit_fleet.html">Edit a fleet |</a>
+		<a href="remove_fleet.html">Remove a fleet |</a>
+	</div>
+	<br>
+	<br>
+	<br>
+	<div class="display_fleet">
+		<button class="button" onclick="displayAllFleets();" id="fleet_overview_display" type="button">Show fleets</button>
+		<div class="data_display" id="fleet_data_display"> </div>
+	</div>
+	<table class="table">
+		<thead id="thead">hello</thead>
+		<tbody id="tbody">goodbye</tbody>
+	</table>
+	<div id="myData"></div>
+</body>
+<script src="js/display_fleets.js"></script>
+</html>

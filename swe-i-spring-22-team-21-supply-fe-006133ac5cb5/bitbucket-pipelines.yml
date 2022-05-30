@@ -1,0 +1,14 @@
+image: atlassian/default-image:2
+
+pipelines:
+  branches:
+    master:
+    - step:
+       name: supply server pipeline supply-fe
+       deployment: supply-fe deployment
+       script:
+         - pipe: atlassian/ssh-run:0.2.2
+           variables:
+             SSH_USER: $USER
+             SERVER: $SUPPLY_SERVER
+             COMMAND: 'cd /home/team21/deploy && ./supply-fe-deploy.sh'

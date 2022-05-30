@@ -1,0 +1,13 @@
+.button{
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+    background-color: #2aad5c;
+    color: #ffffff;
+    border: 5px;
+    border-color: #2aad5c;
+    border-style: solid;
+    border-radius: 18px;
+    margin-left: 150px;
+}

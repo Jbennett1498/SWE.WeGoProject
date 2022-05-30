@@ -1,0 +1,42 @@
+.fleets_window_dash{
+  border: 5px solid #2aad5c;
+  border-radius: 12px;
+  padding: 75px;
+  position: absolute;
+  left:1000px;
+  right: 200px;
+  bottom: 500px;
+  top: 200px;
+  background-color: #7a7a7a;
+  text-align: left;
+}
+
+.vehicles_window_dash{
+  border: 5px solid #2aad5c;
+  border-radius: 12px;
+  padding: 75px;
+  position: absolute;
+  left:1000px;
+  right: 200px;
+  bottom: 300px;
+  top: 400px;
+  background-color: #7a7a7a;
+  text-align: center;
+}
+
+.map_view_window_dash{
+  border: 5px solid #2aad5c;
+  border-radius: 12px;
+  background-color: #7a7a7a;
+  text-align: left;
+  margin-left: 150px;
+  margin-right: 800px;
+  padding: 150px;
+}
+
+
+.top_left{
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}

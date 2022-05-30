@@ -1,0 +1,27 @@
+.buttonsOnAccountPage{
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+    background-color: #2aad5c;
+    color: #ffffff;
+    border: 5px;
+    border-color: #2aad5c;
+    border-style: solid;
+    border-radius: 18px;
+    margin-left: 150px;
+}
+
+ul{
+    list-style: inside;
+    font-size: 18px;
+    background-color: #232d39;
+    padding: 12px;
+    margin-left: 150px;
+    margin-right: 800px;
+    border-radius: 12px;
+}
+
+li{
+    padding: 8px;
+}

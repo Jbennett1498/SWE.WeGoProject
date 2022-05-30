@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Vehicle overview</title>
+	<!-- CSS -->
+    <link rel="stylesheet" href=css/page_layout.css>
+	<link rel="stylesheet" href=css/form.css>
+	<link rel="stylesheet" href=css/data_display.css>
+	<!-- JS -->
+	<script src="js/display_fleets.js"></script>
+	<script src="js/display_vehicles.js"></script>
+</head>
+<body>
+	<div class="dashboard_header">
+		<a href='index.html'>WeGo Fleet Management</a>
+	</div>
+	<div class="page_title">Vehicles Overview</div>
+	<div class="sidenav">
+		<a href="index.html">Dashboard</a>
+        <a href="supply_account_details.html">Account</a>
+        <a href="supply_fleets.html">Fleets</a>
+        <a href="supply_map_view.html">Map view</a>
+        <a href="supply_vehicles.html">Vehicles</a>
+	</div>
+	<div class="horizontal_navbar">
+		<a href="add_vehicle.html">Add a vehicle |</a>
+		<a href="remove_vehicle.html">Remove a vehicle</a>
+	</div>
+	<br><br><br>
+	<!-- Display to select ID -->
+	<div class="display_fleet">
+		<button class="button" onclick="displayAllFleets();" id="fleet_overview_display" type="button">Show fleets</button>
+		<div class="data_display" id="fleet_data_display"> </div>
+	</div>
+	<div class="form">
+		<form name="Form">
+		<!--Fleet_ID -->
+			<label class="form-text" for="fleet_id">Fleet ID Number</label><br>
+			<input class="form-text" type="text" id="fleet_id"/><br>
+		</form>
+	</div>
+	<br>
+	<br>
+	<div class="display_vehicles">
+		<button class="button" onclick="displayVehiclesInAFleet();" id="vehicle_overview_display" type="button">Show vehicles</button>
+		<div class="data_display" id="data_display"> </div>
+	</div>
+</body>

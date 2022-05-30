@@ -1,0 +1,76 @@
+# Vehicle Simulator Class
+
+#### The vehicle simulator (VSIM) goal is to send heartbeat every x seconds, sending it's current position and some other vehicle metrics to the supply cloud, 
+#### and then checking for any updates to the vehicle's orders from the Dispatch function.
+
+---
+
+#### Table of content:
+VSIM terminal
+VSIM Class Usage
+
+---
+
+### VSIM terminal
+### VSIM Class
+
+## Updates 4/24/22
+Test Class added - 
+Update to VSIM extractRoute method - Can now parse both JSON string and Dict objects.
+dispatchResponse.JSON file added, used for simulating the what a "get vehicle id" response would be (our team returns this information in response to a POST Dispatch call)
+
+
+
+## VSIM Terminal:
+## The VSIM terminal presents 7 options. They are: Create a Vehicle, Enter a vehicle's location, Enter the time interval for the Heartbeat function
+
+## Enter a route for the vehicle to travel, Begin heartbeat, Print vehicle details, and Exit. 
+
+## Create a Vehicle asks for a vehicle id code, then creates an instance of the VSIM class using the given code, and then adds the id code and the instance to an array to keep track of the instances and available ID codes.
+
+## Enter a vehicle's location allows the user to manually set the vehicle's current coordinates.
+
+## Enter the time interval for the Heartbeat function allows the user to set the time the heartbeat function waits between sending PATCH and GET calls to the supply API.
+
+## Enter a route for the vehicle to travel gives the user two options. One is to manually enter an array of coordinates for the vehicle to use as a route, the other uses the VSIM method extractRoute to extract from a preset Mapbox JSON object that is in the class folder
+### if you want to change the route file, you can change the name of the file on line 154 of the terminal program.
+
+## Begin heartbeat calls the classes heartbeat function for a given vehicle id code.
+
+## Print vehicle details prints a list of details for a given vehicle id
+
+## Exit ends the VSIM terminal.
+
+
+## VSIM Class:
+## The VSIM class only requires a id code for initializing the class. All other variables are given a default value or a None value.
+
+## Default values are:  defaultVehicleMileage=100, defaultVehicleCharge=100, defaultVehicleStatus="normal", defaultRoute=None, defaultDispatchStatus="none", defaultDispatchID="", defaultTime=5, gpsCoords = [0.0, 0.0], fleet = "", routeFile = None
+
+## There are a few helper functions, including a manualGPS function that the terminal uses to set the vehicle's current location, and then sends a PATCH API call to the Vehicles endpoint updating the current location in the supply cloud. 
+
+## The extractRoute function extracts the intersection coordinates from a Mapbox directions JSON object, and set them into an array for the heartbeat function to iterate through.
+
+## The printVehicle function simply prints the variables that change as a vehicle moves through a route.
+
+## SupplyPatchCall is used for sending updates to the supply cloud regarding that vehicle's current status. PATCH sends back an empty reply, so we do not use it's response data.
+
+## SupplyGetCall is used to get any updates from the supply server for the vehicle.
+
+## UpdateVehicleGetCall is used when the vsim decides to check the response data against the data stored by the VSIM. This will only be called if the VSIM does not have a route AND is currently listed as having a dispatch.
+
+### The primary function of the VSIM is the heartbeat function.
+
+### The function runs in a while loop. This is designed to never end, as it should be looking for new routes while it is not in a job. If you do want the sim to end after running through a route, you can delete the comment block on line 123. 
+
+## First the VSIM sets its position to the first array position, updates it's dispatch status, then begins the heartbeat loop.
+
+### It has some functionality in the terminal for displaying the route details, but it's primary functions include sending the GET and PATCH calls to the supply cloud on the interval established by the user. 
+
+### Each loop it moves one position further down the route array and updates it's current coordinates.
+
+### If the vehicle is not in a job, it will check it's locally stored values against the values passed by the GET call. That functionality is currently commented out on line 92 as our API is not currently active, and throws a 404 error.
+
+## Once the route has been navigated through, it will update it's job dependent variables, clear t's route file, and then send a final PATCH call to update the server that it has finished it's job.
+
+## The heartbeat can then either loop waiting for new instructions to be assigned by the Supply cloud Dispatch, or simply end and return to the terminal.

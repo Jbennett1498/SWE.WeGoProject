@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit fleet</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href=css/page_layout.css>
+    <link rel="stylesheet" href=css/form.css>
+    <link rel="stylesheet" href="css/data_display.css">
+    <!-- JS -->
+    <script src="js/edit_fleet.js"></script>
+    <script src="js/display_fleets.js"></script>
+</head>
+<body>
+    <div class="dashboard_header">
+		<a href='index.html'>WeGo Fleet Management</a>
+	</div>
+    <div class='page_title'>Edit a Fleet</div>
+    <div class="sidenav">
+        <a href="index.html">Dashboard</a>
+        <a href="supply_account_details.html">Account</a>
+        <a href="supply_fleets.html">Fleets</a>
+        <a href="supply_map_view.html">Map view</a>
+        <a href="supply_vehicles.html">Vehicles</a>
+	</div>
+    <div class="horizontal_navbar">
+        <a href="supply_fleets.html">Fleets Overview |</a>
+        <a href="create_fleet.html">Add a fleet |</a>
+        <a href="remove_fleet.html">Remove a fleet |</a>
+	</div>
+    <br><br><br>
+    <!-- Display to select ID -->
+    <div class="display_fleet">
+        <button class="button" onclick="displayAllFleets();" id="fleet_overview_display" type="button">Show fleets</button>
+        <div class="data_display" id="fleet_data_display"> </div>
+    </div>
+    <br>
+    <!-- Order Form-->
+    <div class="form">
+        <form name="Form" autocomplete="off">
+            <!--Fleet ID -->
+            <label class="form-text" for="fleet_id">Fleet ID</label> <br>
+            <input class="form-control" type="text" id="fleet_id" />
+            <!--Fleet name -->
+            <label class="form-text" for="fleet_name">Fleet name</label> <br>
+            <input class="form-control" type="text" id="fleet_name" />
+            <!--Fleet's associated service-->
+            <label class="form-text" for="fleet_service">Fleet service</label> <br>
+            <input class="form-control" type="text" id="fleet_service" />
+            <!--Fleet owner-->
+            <label class="form-text" for="fleet_owner">Fleet owner</label> <br>
+            <input class="form-control" type="text" id="fleet_owner" />
+            <!--Fleet description -->
+            <label class="form-text" for="fleet_desc">Fleet description</label> <br>
+            <input class="form-control" type="text" id="fleet_desc" />
+            <!--Fleet city -->
+            <label class="form-text" for="fleet_city">Fleet city</label> <br>
+            <input class="form-control" type="text" id="fleet_city" />
+            <br>
+            <button class="button" onclick="editFleet();" id ="submit" type="button">Edit Fleet</button>
+        </form>
+    </div>
+</body>
+</html>
