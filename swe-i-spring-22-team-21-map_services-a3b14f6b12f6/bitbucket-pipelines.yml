@@ -1,0 +1,23 @@
+image: atlassian/default-image:2
+
+pipelines:
+  branches:
+    master:
+    - step:
+       name: supply server pipeline
+       deployment: map-services Sdeployment
+       script:
+         - pipe: atlassian/ssh-run:0.2.2
+           variables:
+             SSH_USER: $USER
+             SERVER: $SUPPLY_SERVER
+             COMMAND: 'cd /home/team21/deploy && ./map-services-deploy.sh'
+    - step:
+        name: demand server pipeline
+        deployment: map-services Ddeployment
+        script:
+          - pipe: atlassian/ssh-run:0.2.2
+            variables:
+              SSH_USER: $USER
+              SERVER: $DEMAND_SERVER
+              COMMAND: 'cd /home/team21/deploy && ./map-services-deploy.sh'

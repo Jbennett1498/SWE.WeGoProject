@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>WeGo.Sign-Up</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="CSS/register.css">
+    
+</head>
+
+<body>
+    <nav></nav>
+
+    <section>
+        <div class="middleSec">
+            <div class="midHead"> 
+                <h2 class="fw-bold mb-2 text-uppercase">Sign Up</h2>
+                <p class="text-white-50 mb-5">Become a member and enjoy exclusive offers, rides and rewards</p>
+            </div>
+        
+            <hr size="1" width="100%" color="grey">  
+        
+            <div class="fillForm">
+                <form name="Form">
+                    <div class="formCred FirstN">
+                        <label class="form-label" for="first">First Name</label> <br>
+                        <input type="text" id="first" />
+                    </div>
+                    <div class="formCred LastN">
+                        <label class="form-label" for="last">Last Name</label> <br>
+                        <input type="text" id="last" />
+                    </div>
+                    <div class="formCred DoB">
+                        <label class="form-label" for="doB">Date of Birth</label> <br>
+                        <input type="date" id="doB" name="DoB">
+                    </div>
+                    <div class="formCred email">
+                        <label class="form-label" for="email">Email</label> <br>
+                        <input type="email" id="email" />
+                    </div>
+                    <div class="formCred password">
+                        <label class="form-label" for="password">Password</label> <br>
+                        <input type="password" id="password" />
+                    </div>
+                    <br>
+
+        
+            
+                </form>
+                <button class="btn"  onclick= "doSignUp(); validateForm()" id ="submit" type="submit">Create Account</button>
+
+            </div>
+        
+
+
+            
+            <hr size="1" width="100%" color="grey">
+
+            <div class="newaccount">
+                <p>
+                    <a>Already have an account?</a>
+                    <a href="login.html">Login</a>
+                </p>
+            </div>
+
+        </div>
+      
+                  
+    </section>
+   
+    <script src="JS/register.js"></script>
+</body>
+</html>

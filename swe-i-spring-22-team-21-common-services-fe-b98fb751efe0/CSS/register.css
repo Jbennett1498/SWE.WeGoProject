@@ -1,0 +1,82 @@
+nav {
+    padding: 40px;
+    background-color: white;
+    background-image: url('../IMG/WeGoLogo.jpg');
+    background-size: 250px 250px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+body {
+    background-color: white;
+}
+
+section {
+    padding-top: 40px;
+}
+
+.middleSec {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    padding-top: 20px;
+    font-family: Helvetica, sans-serif;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 6px 10px 10px 5px grey;
+}
+
+.midHead {
+    text-align: center;
+}
+
+.fillForm {
+    padding-top: 20px;
+}
+
+.email {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.submit {
+    padding-bottom: 20px;
+}
+
+.password {
+    padding-top: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #555;
+    border-radius: 6px;
+}
+
+.formCred {
+    padding-top: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 10px 20px;
+    border: 1px solid #555;
+    border-radius: 6px;
+}
+
+.login {
+    padding-bottom: 15px;
+    padding-top: 5px;
+}
+
+.newaccount {
+    text-align: center;
+}
+
+.forgotPass {
+    text-align: right;
+    font-size: 15px;
+}

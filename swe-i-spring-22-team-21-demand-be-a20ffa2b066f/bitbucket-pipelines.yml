@@ -1,0 +1,14 @@
+image: atlassian/default-image:2
+
+pipelines:
+  branches:
+    master:
+    - step:
+       name: demand server pipeline demand-be
+       deployment: demand-be deployment
+       script:
+         - pipe: atlassian/ssh-run:0.2.2
+           variables:
+             SSH_USER: $USER
+             SERVER: $DEMAND_SERVER
+             COMMAND: 'cd /home/team21/deploy && ./demand-be-deploy.sh'

@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+
+  #map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+   }
+
+    #instructions {
+    position: absolute;
+    margin: 10px;
+    width: 15%;
+    top: 0;
+    bottom: 80%;
+    padding: 5px;
+    background-color: #fff;
+    overflow-y: auto;
+    font-family: sans-serif;
+}
